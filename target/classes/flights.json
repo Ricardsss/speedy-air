@@ -1,0 +1,8 @@
+{
+  "1": { "origin": "YUL", "destination": "YYZ", "day": 1, "capacity": 20 },
+  "2": { "origin": "YUL", "destination": "YYC", "day": 1, "capacity": 20 },
+  "3": { "origin": "YUL", "destination": "YVR", "day": 1, "capacity": 20 },
+  "4": { "origin": "YUL", "destination": "YYZ", "day": 2, "capacity": 20 },
+  "5": { "origin": "YUL", "destination": "YYC", "day": 2, "capacity": 20 },
+  "6": { "origin": "YUL", "destination": "YVR", "day": 2, "capacity": 20 }
+}
