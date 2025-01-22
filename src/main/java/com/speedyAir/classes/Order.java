@@ -2,15 +2,19 @@ package com.speedyAir.classes;
 
 public class Order {
   private String orderNumber;
+  private String destination;
   private Flight flight;
 
-  public Order(String orderNumber) {
+  public Order(String orderNumber, String destination) {
     this.orderNumber = orderNumber;
-    this.flight = null;
+    this.destination = destination;
   }
 
-  public Order(String orderNumber, Flight flight) {
-    this.orderNumber = orderNumber;
+  public String getDestination() {
+    return this.destination;
+  }
+
+  public void setFlight(Flight flight) {
     this.flight = flight;
   }
 
@@ -19,7 +23,7 @@ public class Order {
     if (this.flight == null) {
       return String.format("order: %s, flightNumber: not scheduled", this.orderNumber);
     }
-    return String.format("order: %s, flightNumber: %d, departure: %s, arrival: %s, day: %d", this.orderNumber,
-        this.flight.getFlightNumber(), this.flight.getOrigin(), this.flight.getDestination(), this.flight.getDay());
+    return String.format("order: %s, flightNumber: %s, departure: %s, arrival: %s, day: %d", this.orderNumber,
+        this.flight.getFlightNumber(), this.flight.getOrigin(), this.destination, this.flight.getDay());
   }
 }

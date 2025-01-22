@@ -1,14 +1,14 @@
 package com.speedyAir.classes;
 
 public class Flight {
-  private Integer flightNumber;
+  private String flightNumber;
   private String origin;
   private String destination;
   private Integer day;
   private Integer capacity;
   private Integer quantity;
 
-  public Flight(Integer flightNumber, String origin, String destination, Integer day, Integer capacity) {
+  public Flight(String flightNumber, String origin, String destination, Integer day, Integer capacity) {
     this.flightNumber = flightNumber;
     this.origin = origin;
     this.destination = destination;
@@ -17,7 +17,7 @@ public class Flight {
     this.quantity = 0;
   }
 
-  public Integer getFlightNumber() {
+  public String getFlightNumber() {
     return this.flightNumber;
   }
 
@@ -43,7 +43,7 @@ public class Flight {
 
   @Override
   public String toString() {
-    return String.format("Flight %d, departure: %s, arrival: %s, day: %d", this.flightNumber, this.origin,
+    return String.format("Flight %s, departure: %s, arrival: %s, day: %d", this.flightNumber, this.origin,
         this.destination, this.day);
   }
 }
